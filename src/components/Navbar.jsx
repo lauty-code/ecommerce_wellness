@@ -37,9 +37,6 @@ const Navbar = ({ cartCount, onCartClick }) => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group" id="nav-logo">
             <img src="/logo.png" alt="SI Wellness Logo" className="h-10 w-auto transition-transform duration-300 group-hover:scale-105" />
-            <span className="text-xl font-black tracking-tight text-slate-900">
-              SI <span style={{ color: '#0f766e' }}>Wellness</span>
-            </span>
           </a>
 
           {/* Desktop Nav Links */}
