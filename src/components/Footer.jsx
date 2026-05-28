@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="SI Wellness" className="h-9 w-auto brightness-0 invert opacity-90" />
+              <img src="/logo.png" alt="SI Wellness" className="h-12 w-auto brightness-0 invert opacity-90" />
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               Suplementos premium para potenciar tu bienestar y rendimiento. Calidad sin compromisos.

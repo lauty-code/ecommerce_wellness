@@ -36,7 +36,7 @@ const Navbar = ({ cartCount, onCartClick }) => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group" id="nav-logo">
-            <img src="/logo.png" alt="SI Wellness Logo" className="h-10 w-auto transition-transform duration-300 group-hover:scale-105" />
+            <img src="/logo.png" alt="SI Wellness Logo" className="h-12 md:h-16 w-auto transition-transform duration-300 group-hover:scale-105" />
           </a>
 
           {/* Desktop Nav Links */}
