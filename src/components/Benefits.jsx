@@ -26,12 +26,12 @@ const benefits = [
     statLabel: 'Certificado',
   },
   {
-    id: 'benefit-support',
-    icon: '💬',
-    title: 'Soporte Especializado',
-    description: 'Equipo de nutricionistas deportivos disponibles para orientarte en tu suplementación.',
-    stat: '24/7',
-    statLabel: 'Disponible',
+    id: 'benefit-cemei',
+    icon: '👨‍⚕️',
+    title: 'Respaldo Médico CEMEI',
+    description: 'Productos validados y recomendados por los profesionales de la salud de nuestros propios centros médicos.',
+    stat: 'CEMEI',
+    statLabel: 'Avalado',
   },
 ];
 

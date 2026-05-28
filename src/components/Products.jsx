@@ -92,45 +92,61 @@ const ProductCard = ({ product, onAddToCart }) => {
         </div>
 
         {/* Price & CTA */}
-        <div className="flex items-center justify-between mt-5 pt-5 border-t border-slate-100">
-          <div>
-            <p className="text-xs text-slate-400 font-medium">Precio</p>
-            <p className="text-2xl font-black text-slate-900">
-              ${product.price.toLocaleString('es-AR')}
-              <span className="text-sm font-medium text-slate-400 ml-1">ARS</span>
+        <div className="mt-5 pt-5 border-t border-slate-100">
+          {/* Dual Pricing */}
+          <div className="mb-3">
+            <p className="text-xs text-slate-400 font-medium">Precio Público:</p>
+            <p className="text-base font-bold text-slate-400 line-through">
+              ${product.price.toLocaleString('es-AR')} ARS
+            </p>
+          </div>
+          <div className="mb-4">
+            <p className="text-xs font-semibold" style={{ color: '#0f766e' }}>Precio Afiliado SI Wellness:</p>
+            <p className="text-2xl font-black" style={{ color: '#0f766e' }}>
+              ${Math.round(product.price * 0.85).toLocaleString('es-AR')}
+              <span className="text-sm font-medium ml-1" style={{ color: '#0f766e', opacity: 0.7 }}>ARS</span>
             </p>
           </div>
 
-          <button
-            id={`add-to-cart-${product.id}`}
-            onClick={handleAdd}
-            disabled={added}
-            className={`btn-cart flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
-              added
-                ? 'text-white scale-95'
-                : 'text-white'
-            }`}
-            style={{
-              background: added
-                ? 'linear-gradient(135deg, #059669, #10b981)'
-                : 'linear-gradient(135deg, #0f766e, #14b8a6)',
-              boxShadow: added
-                ? '0 4px 15px rgba(5, 150, 105, 0.35)'
-                : '0 4px 15px rgba(15, 118, 110, 0.3)'
-            }}
-          >
-            {added ? (
-              <>
-                <CheckIcon />
-                Agregado
-              </>
-            ) : (
-              <>
-                <CartPlusIcon />
-                Agregar
-              </>
-            )}
-          </button>
+          <div className="flex items-center justify-between">
+            <div />
+            <button
+              id={`add-to-cart-${product.id}`}
+              onClick={handleAdd}
+              disabled={added}
+              className={`btn-cart flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                added
+                  ? 'text-white scale-95'
+                  : 'text-white'
+              }`}
+              style={{
+                background: added
+                  ? 'linear-gradient(135deg, #059669, #10b981)'
+                  : 'linear-gradient(135deg, #0f766e, #14b8a6)',
+                boxShadow: added
+                  ? '0 4px 15px rgba(5, 150, 105, 0.35)'
+                  : '0 4px 15px rgba(15, 118, 110, 0.3)'
+              }}
+            >
+              {added ? (
+                <>
+                  <CheckIcon />
+                  Agregado
+                </>
+              ) : (
+                <>
+                  <CartPlusIcon />
+                  Agregar
+                </>
+              )}
+            </button>
+          </div>
+
+          {/* SI Points */}
+          <p className="text-xs text-slate-400 mt-3 flex items-center gap-1">
+            <span className="text-amber-500">⭐</span>
+            + {Math.floor(product.price * 0.01)} SI Points
+          </p>
         </div>
       </div>
     </div>
@@ -221,7 +237,7 @@ const ProductsSection = ({ onAddToCart }) => {
           ))}
         </div>
 
-        {/* CTA Banner */}
+        {/* SI Wellness Plan Banner */}
         <div
           className="mt-16 rounded-3xl p-8 md:p-12 text-center text-white overflow-hidden relative"
           style={{ background: 'linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%)' }}
@@ -231,14 +247,16 @@ const ProductsSection = ({ onAddToCart }) => {
             <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-white" style={{ transform: 'translate(-30%, 30%)' }} />
           </div>
           <div className="relative z-10">
-            <h3 className="text-2xl md:text-3xl font-black mb-3">¿No sabés por dónde empezar?</h3>
-            <p className="text-teal-100 mb-6 text-lg">Nuestro equipo de nutricionistas puede asesorarte sin costo.</p>
+            <h3 className="text-2xl md:text-3xl font-black mb-3">Potenciá tu Plan de Salud</h3>
+            <p className="text-teal-100 mb-6 text-lg max-w-2xl mx-auto">
+              Suscribite a la extensión SI Wellness y accedé a precios mayoristas, gimnasios adheridos y consultas preventivas con profesionales de CEMEI.
+            </p>
             <button
-              id="cta-asesoramiento"
+              id="cta-plan-wellness"
               className="bg-white font-bold px-8 py-3.5 rounded-2xl text-sm transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
               style={{ color: '#0f766e' }}
             >
-              Obtener Asesoramiento Gratuito
+              Conocer el Plan
             </button>
           </div>
         </div>

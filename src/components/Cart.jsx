@@ -179,6 +179,20 @@ const CartSlider = ({ isOpen, onClose, cartItems, onUpdateQty, onRemove, onCheck
                   ${total.toLocaleString('es-AR')} ARS
                 </span>
               </div>
+
+              {/* SI Points accumulation */}
+              <div
+                className="flex justify-between items-center text-sm font-semibold mt-3 px-3 py-2.5 rounded-xl"
+                style={{ background: 'rgba(15, 118, 110, 0.08)', color: '#0f766e' }}
+              >
+                <span className="flex items-center gap-1.5">⭐ Puntos a acumular con esta compra:</span>
+                <span className="font-black">+{Math.floor(total * 0.01)} SI Points</span>
+              </div>
+
+              {/* Affiliate login CTA */}
+              <p className="text-xs text-slate-400 text-center mt-3">
+                ¿Sos afiliado? <a href="#login" className="font-semibold underline hover:text-teal-700 transition-colors" style={{ color: '#0f766e' }}>Iniciá sesión</a> para aplicar tu descuento.
+              </p>
             </div>
 
             <button

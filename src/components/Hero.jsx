@@ -89,9 +89,9 @@ const Hero = ({ onShopClick }) => {
             {/* Trust badges */}
             <div className="flex flex-wrap gap-6 justify-center lg:justify-start pt-2 animate-fade-in-up delay-400">
               {[
-                { icon: '🏆', text: '100% Natural' },
-                { icon: '🔬', text: 'Calidad Certificada' },
-                { icon: '🚚', text: 'Envío a Todo el País' },
+                { icon: '🏥', text: 'Respaldo SIGroup' },
+                { icon: '👨‍⚕️', text: 'Avalado por CEMEI' },
+                { icon: '🚚', text: 'Envío a todo Formosa' },
               ].map((badge) => (
                 <div key={badge.text} className="flex items-center gap-2 text-sm text-slate-500 font-medium">
                   <span className="text-lg">{badge.icon}</span>

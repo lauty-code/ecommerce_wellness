@@ -71,6 +71,16 @@ const Navbar = ({ cartCount, onCartClick }) => {
               Iniciar Sesión
             </a>
 
+            {/* SI Points Badge */}
+            <div
+              id="nav-si-points"
+              className="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold border border-slate-200 transition-all duration-200 hover:border-teal-300 cursor-default"
+              style={{ background: '#f1f5f9', color: '#0f766e' }}
+            >
+              <span className="text-sm">⭐</span>
+              Mis SI Points: 0
+            </div>
+
             {/* Cart Button */}
             <button
               id="nav-cart"
